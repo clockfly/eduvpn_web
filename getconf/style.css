@@ -1,0 +1,25 @@
+html
+{ }
+
+*
+{ margin: 0;
+  padding: 0;}
+
+body
+{ font-family: "微软雅黑" , "trebuchet ms", arial, sans-serif;
+  font-size: .84em;
+  color: #222;
+  line-height: 1.4em;
+ background: #F7F7F7; 
+  width: 900px;
+  margin: 10px auto 0px auto;}
+ 
+ .padding10 {
+	padding: 10px;
+ }
+  
+select #link {
+	display: block;
+	clear: both;
+
+}

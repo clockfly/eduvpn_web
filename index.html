@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>eduVPN</title>
+  <meta name="keywords" content="IPV6,VPN,教育网,免流量,访问 Twitter Facebook Youtube" />
+  <meta name="description" content="eduVPN提供IPV6/IPV4下的OPENVP服务，通过我们的服务访问Twitter，Facebook，Youtube等因为众所周知的原因在中国无法访问的站点。" />
+  <link rel="stylesheet" href="style/style.css" type="text/css" media="screen" />
+  <script type="text/javascript" src="style/accordian.pack.js"></script>
+</head>
+
+<body onload="new Accordian('basic-accordian',5,'header_highlight');">
+  <div id="logo"><h1>eduVPN </h1></div>
+  <div id="basic-accordian" >
+    <div id="frontpage-header" class="accordion_headings header_highlight">首页</div>
+    <div id="frontpage-content">
+      <div class="accordion_child">
+        <h1>欢迎使用eduVPN：基于openvpn的ipv6 vpn服务</h1>
+        <p>我们提供基于<a href="http://openvpn.net">openvpn</a>的IPV6 VPN服务。</p>
+		
+		<table id="three-columns">
+		<tr>
+		<td>
+		<h2>我们能提供什么</h2>
+		<p>为什么需要我们：</p>
+        <ul>
+          <li>安全，匿名的互联网访问</li>
+          <li>访问因为众所周知的原因在中国境内不能使用的服务</li>
+		  <li>教育网用户免流量使用（需要支持IPV6）</li>
+          <li>访问某些只对美国/日本开放的服务</li>
+        </ul>
+		</td>
+		<td>
+		<h2>为什么选择我们</h2>
+		<p>我们的优势：</p>
+        <ul>
+          <li>多平台支持</li>
+          <li>IPV6/IPV4支持</li>
+          <li><strong>美国/日本/香港 服务器可选</strong></li>
+          <li>每月50GB流量限制</li>
+          <li>无人工干预自动开通</li>
+        </ul>
+		</td>
+		<td>
+		<h2>平台兼容性</h2>
+        <p>以下终端已经被测试，并被官方支持，详见安装配置文档</p>
+        <ul>
+          <li>Android（要求相应内核模块）</li>
+          <li>Mac OX</li>
+          <li>Windows</li>
+          <li>Linux</li>
+        </ul>
+		</td>
+		</tr>
+		</table>
+		
+      </div>
+    </div>
+    <div id="buyandprice-header" class="accordion_headings">立即订购</div>
+    <div id="buyandprice-content">
+      <div class="accordion_child">
+		  <table style="width:100%; border-spacing:0;">
+          <tr><th>时长</th><th>价格</th><th>立即订购</th></tr>
+          <tr><td>月付</td><td>RMB ￥18元/月</td><td><a href="https://my.eduvpn.net/cart.php?a=add&pid=1">立即订购</a></td></tr>
+          <tr><td>季付</td><td>RMB ￥48元/季</td><td><a href="https://my.eduvpn.net/cart.php?a=add&pid=1">立即订购</a></td></tr>
+          <tr><td>半年付</td><td>RMB ￥88元/半年</td><td><a href="https://my.eduvpn.net/cart.php?a=add&pid=1">立即订购</a></td></tr>
+          <tr><td>年付</td><td>RMB ￥138元/年</td><td><a href="https://my.eduvpn.net/cart.php?a=add&pid=1">立即订购</a></td></tr>
+        </table>
+      </div>
+    </div> 
+    <div id="status-header" class="accordion_headings">服务器状态</div>
+    <div id="status-content">
+      <div class="accordion_child">
+		<p>如果您发现服务器流量归零，请切换服务器，并请及时联系我们。</p>
+		<h2>DTI（日本）服务器流量：</h2>
+		<a href="http://my.eduvpn.net/mrtg/eduvpndti.html"><img src="http://my.eduvpn.net/mrtg/eduvpndti-day.png" alt="eduVPN-DTI服务器日流量" /></a>
+		<p>DTI（日本）在线用户人数：</p>
+		<a href="http://dti.redd.tk/openvpn.count.html"><img src="http://dti.redd.tk/openvpn.count-day.png" alt="eduVPN-DTI服务器在线用户人数" /></a>
+		<p>DTI（日本）网络状况（ping With Amazon.cn）：</p>
+		<a href="http://dti.redd.tk/localhost.ping.html"><img src="http://dti.redd.tk/localhost.ping-day.png" alt="eduVPN-DTI服务器网络状况" /></a>
+		<p>DTI（日本）网络状况（ping6 With bt.neu6.edu.cn）：</p>
+		<a href="http://dti.redd.tk/localhost.ping6.html"><img src="http://dti.redd.tk/localhost.ping6-day.png" alt="eduVPN-DTI服务器网络状况" /></a>
+		
+		<h2>HE（美国）服务器日流量：</h2>
+		<a href="http://my.eduvpn.net/mrtg/eduvpnhe.html"><img src="http://my.eduvpn.net/mrtg/eduvpnhe-day.png" alt="eduVPN-HE服务器日流量" /></a>
+      </div>
+    </div>
+    <div id="setup-header" class="accordion_headings">安装配置</div>
+    <div id="setup-content">
+      <div class="accordion_child">
+		<h2>Windows下安装配置与连接</h2>
+		<ol>
+		<li>下载<a href="openvpn-2.3-eduVPN-i686.exe.zip">openvpn-2.3-eduVPN-i686.exe.zip</a>（32位）或<a href="openvpn-2.3-eduVPN-x86_64.exe.zip">openvpn-2.3-eduVPN-x86_64.exe.zip</a>（64位）并安装。</li>
+		<li>修改您 本地连接 - Internet协议版本4（TCP/IPV4） 中DNS服务器为 8.8.8.8（首选DNS）8.8.4.4（备用DNS）。</li>
+		<li>新建一个空白文档，重命名为eduvpn.txt，将我们发送给您的用户名，密码保存到其中，譬如您的用户名为 asdf，密码为1234，则文本文档内容为：<br />
+		asdf <br />
+		1234 <br />
+		然后将该文档复制到openvpn安装目录下的config文件夹，譬如（默认位置）：C:\Program Files (x86)\OpenVPN\config 。
+		</li>
+		<li>您现在可以双击桌面的eduVPN，选择合适的配置文件连接了。<br />
+		<span class="bold">注意：对于Vista，Windows 7 或更高版本的Windows系统，您必须点击右键，选择以管理员身份运行，否则openvpn将没有权限设置路由。导致您虽然连接成功却不能访问网络。</span></li>
+		</ol>
+		<h2>Mac OSX下安装配置与连接</h2>
+		<ol>
+		<li>下载<a href="https://github.com/downloads/cyfdecyf/openvpn-ipv6-osx-binary/Tunnelblick-3.2beta29.dmg">TunnelBlick 3.0 final with openvpn IPv6 patch</a>并安装。</li>
+		<li>请点击下载 <a href="config.zip">config.zip</a>，找到找到里面的所有文件。并新建包含您用户名密码的eduvpn.txt（请参考Windows下建立eduvpn.txt的步骤）。将所有文件放到 ~/Library/Application Support/Tunnelblick/Configurations （注意是用户目录下的Library目录，而非根目录下的Library目录） 目录下面。</li>
+		<li>现在您可以选择合适的配置文件连接了。</li>
+		</ol>
+		<h2>Linux 下安装配置与连接</h2>
+		<ol>
+		<p>因为目前大部分发行版中的openvpn尚未启用ipv6支持，且编译时默认没有启用password-save。所以我们推荐所有的Linux用户自行编译openvpn。因为2.3还处在alpha阶段，所以我们使用稳定的2.2.0版搭配jjo的补丁。</p>
+		<li>首先是解决依赖问题。编译并使用openvpn需要如下依赖：gcc，lzo-devel，openssl-devel，make，patch，libgcrypt-devel等。您需要使用自己发行版的包管理工具安装上这些依赖。
+		<pre>对于centos，fedora等红帽系系统，请使用yum安装：
+yum install patch gcc lzo-devel openssl-devel make libgcrypt-devel
+对于Debian，ubuntu等debian系系统，请使用apt-get安装：
+apt-get install patch gcc lzo-devel openssl-devel make libgcrypt-devel</pre></li>		
+		<li>获取openvpn和jjo ipv6 patch源代码。并应用jjo的ipv6 patch。
+		<pre>wget http://swupdate.openvpn.org/community/releases/openvpn-2.2.0.tar.gz
+wget https://github.com/downloads/jjo/openvpn-ipv6/openvpn-2.2.0-ipv6-0.4.16.patch.gz
+tar -zxvf openvpn-2.2.0.tar.gz 
+gzip -d openvpn-xxx-ipv6-xxx.patch.gz 
+patch -p0 < openvpn-xxx-ipv6-xxx.patch
+		</pre></li>
+		<li>编译安装。我们启用--enable-password-save选项从而可以从文件读取用户名和密码。
+		<pre>./configure --enable-password-save
+make 
+sudo make install </pre>
+		</li>
+		<li>请点击下载 <a href="config.zip">config.zip</a>，找到里面的所有文件。并新建包含您用户名密码的eduvpn.txt（请参考Windows下建立eduvpn.txt的步骤）。<br />
+		建立配置文件文件夹，并放置所有文件到其中<br />
+		<pre>sudo mkdir /etc/openvpn
+sudo cp xxx /etc/openvpn</pre>
+		连接<br />
+		<pre>sudo openvpn --cd /etc/openvpn --config xxx_xxx.ovpn --daemon</pre></li>
+		<li>您也可以使用源码目录下的init.d脚本：sample-scripts/openvpn.init 而使openvpn可以开机自动运行。请直接阅读文件内容完成设置。</li>
+		</ol>
+		</div>
+    </div>
+    <div id="advanceduse-header" class="accordion_headings">进阶配置</div>
+    <div id="advanceduse-content">
+      <div class="accordion_child">
+		<ol>
+		<h3><li>蹭移动，电信，联通热点或者假期在家短期使用IPV4的VPN</li></h3>
+		<p>电信，移动以及联通在大城市都覆盖有热点但是需要通过相应的认证后才能使用，但是在连接上热点/网络以后，未对DNS查询（53端口流量）做限制。您可以在连上相应热点以后，不通过认证，直接使用我们给的配置文件中的eduvpn-hk-4.ovpn，eduvpn-jp-4.ovpn进行连接。然后就可以正常使用网络了。</p>
+		<p>当然您暑假在家要短期使用ipv4 VPN也可以连接上述配置文件。</p>
+		<h3><li>设定特定IP/IP段 不通过VPN直接连接</li></h3>
+		<p>这在使用某些校内服务的时候特别有用（比如使用学校IP认证的服务，或者校内的BT服务，图书馆服务等。）。以下叙述稍显复杂，如果您有需要又不想自己动手，请在客户中心提交支持单，并注明您所在的学校，我们将在一个工作日内为您做好路由表 <br />
+		首先您需要找到您的学校分配到的IP段，您需要用到：<a href="http://www.cz88.net/">纯真IP数据库</a>并使用<a href="http://wq.apnic.net/apnic-bin/whois.pl/">APNIC提供的IP WHOIS工具</a>验证。<br />
+		您获取到的IP数据经过整理以后应该是像下面这样（以北师大为例）：<br />
+		<pre>
+	59.64.32.0      59.64.63.255    北京市 北京师范大学
+	114.255.218.0   114.255.218.255 北京市 北京师范大学
+	202.112.80.0    202.112.95.255  北京师范大学 艺术楼机房
+	210.31.64.0     210.31.79.255   北京师范大学  CZ88.NET
+	219.142.99.0    219.142.99.31  北京市 北京师范大学
+	219.142.121.0   219.142.121.63 北京市 北京师范大学
+	219.224.16.0     219.224.31.255  北京市 北京师范大学
+		</pre>
+		然后转化为openvpn使用的路由格式：<br />
+		<pre>
+	route 59.64.32.0 255.255.224.0 net_gateway 
+	route 114.255.218.0 255.255.255.0 net_gateway 
+	route 202.112.80.0 255.255.240.0 net_gateway 
+	route 210.31.64.0 255.255.240.0 net_gateway 
+	route 219.142.99.0 255.255.255.224 net_gateway 
+	route 219.142.121.0 255.255.255.192 net_gateway 
+	route 219.224.16.0 255.255.240.0 net_gateway  
+		</pre>
+		请注意观察将IP块转化为掩码格式的规律。转换完成后添加到配置文件最后即可。		<br />
+		</p>
+		</ol>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <p>Copyright eduVPN  | <a href="http://www.html5webtemplates.co.uk">design from HTML5webtemplates.co.uk</a> | <a href="http://dezinerfolio.com">AJAX by DezinerFolio</a></p>
+  </div>
+</body>
+</html>

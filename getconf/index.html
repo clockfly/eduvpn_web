@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>eduVPN 配置文件下载</title>
+	<link rel="stylesheet" href="style.css" />
+	<script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="jquery.chained.js" type="text/javascript" charset="utf-8"></script>
+	 <script type="text/javascript" charset="utf-8">
+	  $(function() {
+		
+		/* For jquery.chained.js */
+		$("#server").chained("#link");
+		$("#route").chained("#server,#link");
+		
+		/* Show button after each pulldown has a value. */
+		$("#engine").bind("change", function(event) {
+			if ("" != $("option:selected", this).val() && "" != $("option:selected", $("#model")).val()) {
+				$("#button").fadeIn();
+			} else {
+				$("#button").hide();          
+			}
+		});
+		
+	  });
+	 </script>
+</head>
+<body>
+	<form action="">
+	<p id="link-info">
+	请选择您的连线方式：
+	</p>
+	<select id="link" name="link">
+	  <option value="">--</option>
+	  <option value="ipv6">IPV6 openVPN连接</option>
+	  <option value="pptp">IPV4 PPTP连接</option>
+	</select>
+	<p id="server-select">
+		请选择您想要连接的服务器：
+	</p>
+	<p id="server-info">
+		Sakura位于日本，对国内连接速度最好，建议如果没有特殊需求默认使用。BlueVM和HE请当作后备吧。
+	</p>
+	<select id="server" name="server">
+	  <option value="">--</option>
+	  <option value="sakura" class="ipv6">Sakura_日本</option>
+	  <option value="blue" class="ipv6">BlueVM_美国</option>
+	  <option value="he" class="ipv6">HE_美国</option>
+	  <option value="sakura" class="pptp">Sakura_日本</option>
+	  <option value="blue" class="pptp">BlueVM_美国</option>
+	</select>
+	<p id="route-info">请选择您的路由方式：</p>
+	<select id="route" name="route">
+	  <option value="">--</option>
+	  <option value="default" class="sakura ipv6">所有流量过服务器</option>
+	  <option value="cn" class="sakura ipv6">国内流量不通过服务器</option>
+	  <option value="cernet" class="sakura ipv6">教育网流量不通过服务器</option>
+	  <option value="bnu" class="sakura ipv6">北京师范大学_校内路由</option>
+	  <option value="bupt" class="sakura ipv6">北京邮电大学_校内路由</option>
+	  <option value="bjfu" class="sakura ipv6">北京林业大学_校内路由</option>
+	  <option value="bjtu" class="sakura ipv6">北京交通大学_校内路由</option>
+	  <option value="bjut" class="sakura ipv6">北京工业大学_校内路由</option>
+	  <option value="buaa" class="sakura ipv6">北京航空航天大学_校内路由</option>
+	  <option value="buct" class="sakura ipv6">北京化工大学_校内路由</option>
+	  <option value="ustb" class="sakura ipv6">北京科技大学_校内路由</option>
+	  <option value="cau" class="sakura ipv6">中国农业大学_校内路由</option>
+	  <option value="xdu" class="sakura ipv6">西安电子科学技术大学_校内路由</option>
+	  <option value="cqu" class="sakura ipv6">重庆大学_校内路由</option>
+	  <option value="cuc" class="sakura ipv6">中国传媒大学_校内路由</option>
+	  <option value="dlut" class="sakura ipv6">大连理工大学_校内路由</option>
+	  <option value="fdu" class="sakura ipv6">复旦大学_校内路由</option>
+	  <option value="hfut" class="sakura ipv6">合肥工业大学_校内路由</option>
+	  <option value="hust" class="sakura ipv6">华中科技大学_校内路由</option>
+	  <option value="jlu" class="sakura ipv6">吉林大学_校内路由</option>
+	  <option value="jnu" class="sakura ipv6">暨南大学_校内路由</option>
+	  <option value="fdu" class="sakura ipv6">东北大学_校内路由</option>
+	  <option value="fdu" class="sakura ipv6">复旦大学_校内路由</option>
+	  <option value="fdu" class="sakura ipv6">复旦大学_校内路由</option>
+	</select>
+	</form>
+</body>
+</html>
