@@ -1,6 +1,6 @@
 <?php 
-$file_name = $_GET["ipvx"] . - . $_GET["server"] . - . $_GET["route"] . "." . ovpn ;     //下载文件名  
-$file_dir = "./conf/";        //下载文件存放目录  
+$file_name = $_GET["server"] . "-" . $_GET["location"] ."-" . $_GET["route"] . ".ovpn" ;     //下载文件名  
+$file_dir = "./conf/". $_GET["location"] . "/" .$_GET["server"]  .  "/";        //下载文件存放目录  
 //检查文件是否存在  
 if (! file_exists ( $file_dir . $file_name )) {  
     echo "文件找不到";  

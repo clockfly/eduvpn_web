@@ -10,8 +10,8 @@
 	  $(function() {
 		
 		/* For jquery.chained.js */
-		$("#server").chained("#link");
-		$("#route").chained("#server,#link");
+		$("#server").chained("#location");
+		$("#route").chained("#server,#location");
 		
 		/* Show button after each pulldown has a value. */
 		$("#engine").bind("change", function(event) {
@@ -38,66 +38,70 @@
 	<p class="getconf-info">如果没有特殊需求的话，位于日本的Sakura服务器应该能满足您的所有需求，请选择对应您学校的Sakura服务器配置文件即可。<br />
 	不过如果您需要访问一些只能由美国IP访问的站点或者Sakura不可用可以选择HE或者Blue。
 	</p>
-	获取配置文件以后：
+	<h3 class="getconf-info">获取配置文件以后：</h3>
 	<ul>
 		<li>Windows用户请将配置文件放置到安装目录下面的config目录</li>
 		<li>Linux用户请放置到您指定的配置文件目录，一般为 /etc/openvpn</li>
 		<li>Mac OS用户请放置到 ~/Library/Application Support/Tunnelblick/Configurations</li>
 	</ul>
-	<form action="">
-	<p id="link-info">
-	请选择您需要的服务器所在地：
-	</p>
-	<select id="link" name="link">
-	  <option value="">--</option>
-	  <option value="JP">日本</option>
-	  <option value="US">美国</option>
-	</select>
-	<p id="server-select">
-		请选择您想要连接的服务器：
-	</p>
-	<p id="server-info">
-		Sakura位于日本，对国内连接速度最好，建议如果没有特殊需求默认使用。BlueVM和HE请当作后备吧。
-	</p>
-	<select id="server" name="server">
-	  <option value="">--</option>
-	  <option value="sakura" class="JP">Sakura_日本</option>
-	  <option value="blue" class="US">BlueVM_美国</option>
-	  <option value="he" class="US">HE_美国</option>
-	</select>
-	<p id="route-info">请选择您的路由方式：</p>
-	<select id="route" name="route">
-	  <option value="">--</option>
-	  <option value="default" class="sakura JP">所有流量过服务器</option>
-	  <option value="cn" class="sakura JP">国内流量不通过服务器</option>
-	  <option value="cernet" class="sakura JP">教育网流量不通过服务器</option>
-	  <option value="bnu" class="sakura JP">北京师范大学_校内路由</option>
-	  <option value="pku" class="sakura JP">北京大学_校内路由</option>
-	  <option value="bupt" class="sakura JP">北京邮电大学_校内路由</option>
-	  <option value="thu" class="sakura JP">清华大学_校内路由</option>
-	  <option value="bjfu" class="sakura JP">北京林业大学_校内路由</option>
-	  <option value="bjtu" class="sakura JP">北京交通大学_校内路由</option>
-	  <option value="bjut" class="sakura JP">北京工业大学_校内路由</option>
-	  <option value="buaa" class="sakura JP">北京航空航天大学_校内路由</option>
-	  <option value="buct" class="sakura JP">北京化工大学_校内路由</option>
-	  <option value="ustb" class="sakura JP">北京科技大学_校内路由</option>
-	  <option value="cau" class="sakura JP">中国农业大学_校内路由</option>
-	  <option value="xdu" class="sakura JP">西安电子科学技术大学_校内路由</option>
-	  <option value="cqu" class="sakura JP">重庆大学_校内路由</option>
-	  <option value="cuc" class="sakura JP">中国传媒大学_校内路由</option>
-	  <option value="dlut" class="sakura JP">大连理工大学_校内路由</option>
-	  <option value="fdu" class="sakura JP">复旦大学_校内路由</option>
-	  <option value="hfut" class="sakura JP">合肥工业大学_校内路由</option>
-	  <option value="hust" class="sakura JP">华中科技大学_校内路由</option>
-	  <option value="jlu" class="sakura JP">吉林大学_校内路由</option>
-	  <option value="jnu" class="sakura JP">暨南大学_校内路由</option>
-	  <option value="neu" class="sakura JP">东北大学_校内路由</option>
-	  <option value="scut" class="sakura JP">华南理工大学_校内路由</option>
-	  <option value="sjtu" class="sakura JP">上海交通大学_校内路由</option>
-	  <option value="swjtu" class="sakura JP">西南交通大学_校内路由</option>
-	  <option value="tju" class="sakura JP">天津大学_校内路由</option>
-	  <option value="whu" class="sakura JP">武汉大学_校内路由</option>
-	</select>
+	
+	<h3 class="getconf-info">获取配置文件</h3>
+	
+	<form action="download.php" method="get">
+
+		<p class="getconf-info">请选择您需要的服务器所在地：</p>
+
+		<select id="location" name="location" class="margin10">
+		  <option value="">--</option>
+		  <option value="JP">日本</option>
+		  <option value="US">美国</option>
+		</select>
+		
+		<p class="getconf-info">请选择您想要连接的服务器：</p>
+		
+		<select id="server" name="server" class="margin10">
+		  <option value="">--</option>
+		  <option value="sakura" class="JP">Sakura_日本</option>
+		  <option value="blue" class="US">BlueVM_美国</option>
+		  <option value="he" class="US">HE_美国</option>
+		</select>
+		
+		<p class="getconf-info">请选择您的路由方式：</p>
+		
+		<select id="route" name="route" class="margin10">
+		  <option value="">--</option>
+		  <option value="6" class="sakura JP">所有流量过服务器</option>
+		  <option value="bnu" class="sakura JP">北京师范大学_校内路由</option>
+		  <option value="pku" class="sakura JP">北京大学_校内路由</option>
+		  <option value="bupt" class="sakura JP">北京邮电大学_校内路由</option>
+		  <option value="thu" class="sakura JP">清华大学_校内路由</option>
+		  <option value="bjfu" class="sakura JP">北京林业大学_校内路由</option>
+		  <option value="bjtu" class="sakura JP">北京交通大学_校内路由</option>
+		  <option value="bjut" class="sakura JP">北京工业大学_校内路由</option>
+		  <option value="buaa" class="sakura JP">北京航空航天大学_校内路由</option>
+		  <option value="buct" class="sakura JP">北京化工大学_校内路由</option>
+		  <option value="ustb" class="sakura JP">北京科技大学_校内路由</option>
+		  <option value="cau" class="sakura JP">中国农业大学_校内路由</option>
+		  <option value="xdu" class="sakura JP">西安电子科学技术大学_校内路由</option>
+		  <option value="cqu" class="sakura JP">重庆大学_校内路由</option>
+		  <option value="cuc" class="sakura JP">中国传媒大学_校内路由</option>
+		  <option value="dlut" class="sakura JP">大连理工大学_校内路由</option>
+		  <option value="fdu" class="sakura JP">复旦大学_校内路由</option>
+		  <option value="hfut" class="sakura JP">合肥工业大学_校内路由</option>
+		  <option value="hust" class="sakura JP">华中科技大学_校内路由</option>
+		  <option value="jlu" class="sakura JP">吉林大学_校内路由</option>
+		  <option value="jnu" class="sakura JP">暨南大学_校内路由</option>
+		  <option value="neu" class="sakura JP">东北大学_校内路由</option>
+		  <option value="scut" class="sakura JP">华南理工大学_校内路由</option>
+		  <option value="sjtu" class="sakura JP">上海交通大学_校内路由</option>
+		  <option value="swjtu" class="sakura JP">西南交通大学_校内路由</option>
+		  <option value="tju" class="sakura JP">天津大学_校内路由</option>
+		  <option value="whu" class="sakura JP">武汉大学_校内路由</option>
+		</select>
+		<br />
+		<input type="submit" value="立即获取配置文件" class="margin10" />
+		
 	</form>
+	<p></p>
 </body>
 </html>
