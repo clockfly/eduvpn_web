@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>eduVPN</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="/css/style.css" rel="stylesheet" media="screen">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/js/html5shiv.js"></script>
+      <script src="/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<!-- Static navbar -->
+<div class="navbar navbar-default">
+<div class="container">
+<div class="navbar-header">
+  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+  </button>
+  <a class="navbar-brand" href="#">eduVPN</a>
+</div>
+<div class="navbar-collapse collapse">
+  <ul class="nav navbar-nav">
+	<li class="active"><a href="/index.html#">主页</a></li>
+	<li><a href="/index.html#attribute">服务特性</a></li>
+	<li><a href="/index.html#server-status">服务器状态</a></li>
+	<li><a href="/setup-guide">安装配置</a></li>
+  </ul>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="col-md-8">
+	<div class="jumbotron bg-lightblue">
+		<h1>Hello, world!</h1>
+		<p>我们是eduVPN，我们从2010年开始服务，我们提供高可靠性的IPV6 VPN服务。</p>
+		<p><a class="btn btn-primary btn-lg" href="https://my.eduvpn.net/cart.php">立即订购 &raquo;</a></p>
+	</div>
+</div>
+<div class="col-md-4">
+	<div class="panel panel-default">
+	  <div class="panel-heading"><b>服务价格</b></div>
+	  <div class="panel-body">
+		<p>我们限制流量的目的只是为了确保更好的用户体验，因为流量超掉而无法连接可以<a href="https://my.eduvpn.net/submitticket.php">提交ticket</a>要求客服手动开通。</p>
+	  </div>
+	  <table class="table">
+ 		<thead>
+		  <tr>
+			<th>时长</th>
+			<th>价格</th>
+			<th>流量</th>
+		  </tr>
+		</thead> 
+		<tbody>
+		  <tr>
+			<td><a href="https://my.eduvpn.net/cart.php?a=add&pid=1">月付</a></td>
+			<td>￥18</td>
+			<td>50GB/月</td>
+		  </tr>
+		  <tr>
+			<td><a href="https://my.eduvpn.net/cart.php?a=add&pid=1">季付</a></td>
+			<td>￥48</td>
+			<td>50GB/月</td>
+		  </tr>
+		  <tr>
+			<td><a href="https://my.eduvpn.net/cart.php?a=add&pid=1">半年</a></td>
+			<td>￥88</td>
+			<td>50GB/月</td>
+		  </tr>
+		  <tr>
+			<td><a href="https://my.eduvpn.net/cart.php?a=add&pid=1">一年</a></td>
+			<td>￥138</td>
+			<td>50GB/月</td>
+		  </tr>
+		</tbody>
+	  </table>
+	</div>
+</div>
+</div>
+
+<div class="container" id="attribute">
+<div class="page-header">
+  <h1 class="text-primary">服务特性</h1>
+</div>
+
+	<div class="col-lg-6">
+		<h2>为什么选择我们：</h2>
+		<blockquote class="bg-lightblue"><p>我们是少数提供 <strong class="text-primary">IPV6 VPN服务</strong> 的服务商，教育网用户可以通过IPV6免流量访问国际互联网。</p></blockquote>
+		<blockquote class="bg-lightblue"><p>我们从 <strong class="text-primary">2010年</strong> 开始服务，我们已经 <strong class="text-primary">三年</strong> 了，远超大部分服务商。</p></blockquote>
+		<blockquote class="bg-lightblue"><p>我们提供 <strong class="text-primary">日本，美国</strong> 等多个位置的服务器。</p></blockquote>
+		<blockquote class="bg-lightblue"><p>我们自己是这个服务的重度使用者，所以我们很 <strong class="text-primary">关心用户体验</strong> 。</p></blockquote>
+		<h2>为什么没有l2tp，ipsec：</h2>
+		<blockquote><p>前者相对openvpn，PPTP并没有任何优势，后者我们将在近期提供。</p></blockquote>
+	</div>
+
+	<div class="col-lg-6">
+		<h2>支持的平台：</h2>
+		<blockquote class="bg-yellow">
+			<p>Windows</p>
+			<small>我们提供openvpn的整合安装包，最大化简化安装配置难度。</small>
+		</blockquote>
+		<blockquote class="bg-yellow">
+			<p>Mac OS X</p>
+			<small>需要通过tunnelblick使用openvpn。</small>
+		</blockquote>
+		<blockquote class="bg-yellow">
+			<p>Linux</p>
+			<small>linux下某些安装包需要编译。</small>
+		</blockquote>
+		<blockquote class="bg-yellow">
+			<p>Android</p>
+			<small>Google Play提供openvpn的官方包下载，对PPTP，shadowsocks也支持良好。</small>
+		</blockquote>
+		<blockquote class="bg-yellow">
+			<p>iOS</p>
+			<small>可以正常使用openVPN，PPTP，shadowsocks。</small>
+		</blockquote>
+	</div>
+</div>
+
+<div class="container" id="server-status">
+<div class="page-header"><h1 class="text-primary">服务器状态</h1></div>
+<div class="page-header"><h2>服务列表：</h2></div>
+  <table class="table">
+	<thead>
+	  <tr>
+		<th>#</th>
+		<th>服务器名称</th>
+		<th>服务列表</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <tr>
+		<td>1</td>
+		<td><a href="http://munin.eduvpn.net/JP.VPNServer/sakura.JP.VPNServer/index.html">sakura</a></td>
+		<td>openVPN(ipv4,ipv6),shadowsocks(ipv4,ipv6) <small class="text-warning">beta</small>,PPTP（ipv4 only）</td>
+	  </tr>
+	  <tr>
+		<td>2</td>
+		<td><a href="http://munin.eduvpn.net/US.VPNServer/ramnode.US.VPNServer/index.html">ramnode</a></td>
+		<td>openVPN(ipv4,ipv6),shadowsocks(ipv4,ipv6) <small class="text-warning">beta</small>,PPTP（ipv4 only）</td>
+	  </tr>
+	  <tr>
+		<td>3</td>
+		<td>he</td>
+		<td>openVPN(ipv6 only)</td>
+	  </tr>
+	</tbody>
+  </table>
+<div class="page-header"><h2>服务器流量：</h2></div>
+	<div class="col-lg-6">
+		<h3>ramnode 日流量：</h3>
+		<img src="http://munin.eduvpn.net/US.VPNServer/ramnode.US.VPNServer/if_eth0-day.png" alt="ramnode 日流量" class="img-responsive" />
+	</div>
+  
+	<div class="col-lg-6">
+		<h3>sakura	日流量：</h3>
+		<img src="http://munin.eduvpn.net/JP.VPNServer/sakura.JP.VPNServer/if_eth0-day.png" alt="sakura 日流量" class="img-responsive" />
+	</div>
+</div>
+
+<div id="footer">
+  <div class="container">
+	<p class="text-muted credit">自豪的采用 <a href="http://getbootstrap.com/">Bootstrap</a> 以及 <a href="http://bootswatch.com/cosmo/">CosMO</a>.</p>
+  </div>
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+</html>
