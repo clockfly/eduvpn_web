@@ -100,8 +100,74 @@
 		
 		
 		
-	  <div class="tab-pane fade" id="pptp-setup">稍后更新</div>
-	  <div class="tab-pane fade" id="shadowsocks-setup">稍后更新</div>
+	  <div class="tab-pane fade" id="pptp-setup">
+		<div class="page-header"><h2>PPTP相关信息</h2></div>
+			<p>PPTP相对（shadowsocks，openvpn，ipsec等）来说加密性较差，（也因此较少被墙完全封杀）但是配置比较方便且在所有平台均可以免客户端登录。提供PPTP服务的服务器已经在首页列出。相关配置如下：</p>
+			<ul>
+				<li>服务器地址：与首页列出相同</li>
+				<li>用户名：与您设置的openvpn用户名相同</li>
+				<li>密码：与您设置的openvpn密码相同</li>
+			</ul>
+			<p>鉴于PPTP方式连接已经非常普遍，这里不再给出具体的连接方法，请使用关键词<code>pptp+连接+系统平台</code>，例如：<a href="http://www.baidu.com/s?word=pptp+%E8%BF%9E%E6%8E%A5+IOS&ie=utf-8">pptp 连接 IOS</a></p>
+		</div>
+
+		
+	  <div class="tab-pane fade" id="shadowsocks-setup">
+	  <div class="page-header"><h2>Shadowsocks相关设置</h2></div>
+		<p>shadowsocks目前为止相对来说加密性较好，效率最高，而且同时支持ipv4和ipv6，所以是目前比较推荐的连接方式。相关配置如下：</p>
+		<ul>
+				<li>server：与首页列出的地址相同</li>
+				<li>server_port：需要<a href="https://my.eduvpn.net/submitticket.php">提交ticket</a>获取</li>
+				<li>local_port：由您自己自由设置（与其他用到代理的地方保持一致）</li>
+				<li>password：需要<a href="https://my.eduvpn.net/submitticket.php">提交ticket</a>获取</li>
+				<li>timeout：推荐设置为<code>60</code></li>
+				<li>method：<code>aes-128-cfb</code></li>
+				<li>fast_open：使用Linux且内核版本高于3.7的推荐设置为<code>true</code>，其他系统不设置此项</li>
+			</ul>
+		<p>Shadowsocks需要使用客户端连接，相关客户端推荐如下：</p>
+		<h3>Windows</h3>
+			<ul>
+				<li>shadowsocks-gui: <a href="http://sourceforge.net/projects/shadowsocksgui/files/dist/shadowsocks-gui-0.4.1-win-ia32.7z">0.4.1-win-ia32.7z</a> //由shadowsocks作者提供，体积较大，界面比较美观，功能单一</li>
+				<li>Yingwa: <a href="yingwa.zip">1.4</a> //使用AHK提供的界面，同时提供自动设置代理，socks5转HTTP代理功能，推荐</li>
+			</ul>
+		<h3>Mac OS X</h3>
+			<ul>
+				<li>ShadowsocksX: <a href="http://sourceforge.net/projects/shadowsocksgui/files/dist/ShadowsocksX-1.0.9.dmg">1.0.9.dmg</a></li>
+				<li>shadowsocks-gui: <a href="http://sourceforge.net/projects/shadowsocksgui/files/dist/shadowsocks-gui-0.4.1-osx-ia32.7z">0.4.1-osx-ia32.7z</a></li>
+				<li>GoAgentX: <a href="https://goagentx.googlecode.com/files/GoAgentX-v2.2.9.dmg">v2.2.9.dmg</a></li>
+			</ul>
+		<h3>Linux</h3>
+			<ul>
+				<li>推荐<a href="https://github.com/madeye/shadowsocks-libev">shadowsocks-libev</a>：纯C实现，效率较高，安装说明见<a href="https://github.com/madeye/shadowsocks-libev">github</a>。 </li>
+				<li><a href="https://github.com/clowwindy/shadowsocks">shadowsocks-python</a>：使用pip安装</li>
+				<li><a href="https://github.com/clowwindy/shadowsocks-nodejs">shadowsocks-nodejs</a>：使用npm安装</li>
+			</ul>
+		<h3>Android</h3>
+			<ul>
+				<li>shadowsocks-Android：<a href="https://play.google.com/store/apps/details?id=com.github.shadowsocks">Google Play</a></li>
+				<li>fqrouter2：<a href="https://play.google.com/store/apps/details?id=fq.router2">Google Play</a></li>
+			</ul>
+		<h3>iOS</h3>
+			<ul>
+				<li>shadowsocks-iOS (只有内置浏览器被代理):：<a href="https://itunes.apple.com/tc/app/shadowsocks/id665729974?mt=8">App Store</a></li>
+				<li>Big BOSS：<a href="http://apt.thebigboss.org/onepackage.php?bundleid=com.linusyang.shadowsocks">Big BOSS</a> //需要越狱</li>
+				<li>shadowsocks：<a href="http://apt.thebigboss.org/repofiles/cydia/debs2.0/shadowsocks_0.3-5.deb">0.3-5</a> //需要越狱</li>
+			</ul>
+		<h3>openwrt</h3>
+			<ul>
+				<li><a href="http://shadowsocks.org/nightly/shadowsocks-libev-polarssl_1.4.6_ar71xx.ipk">ar71xx.ipk</a></li>
+				<li><a href="http://shadowsocks.org/nightly/shadowsocks-libev-polarssl_1.4.6_brcm47xx.ipk">brcm47xx.ipk</a></li>
+				<li><a href="http://shadowsocks.org/nightly/shadowsocks-libev-polarssl_1.4.6_brcm63xx.ipk">brcm63xx.ipk</a></li>
+				<li><a href="http://shadowsocks.org/nightly/shadowsocks-libev-polarssl_1.4.6_ramips_24kec.ipk">ramips_24kec.ipk</a></li>
+			</ul>
+			<p>openwrt相关教程可以参考这里：<a href="http://hong.im/2014/07/08/use-ipset-with-shadowsocks-on-openwrt/">使用ipset让openwrt上的shadowsocks更智能的重定向流量</a></p>
+			
+		<div class="alert alert-warning alert-dismissable">
+		  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		  <strong>注意: </strong>对于Mac OS X，Windows ，Linux 推荐使用Chrome配合<a href="https://chrome.google.com/webstore/detail/proxy-switchysharp/dpplabbmogkhghncfbfdeeokoefdjegm?hl=zh-CN">Proxy SwitchySharp</a>，导入：<a href="SwitchyOptions.bak">SwitchyOptions.bak</a>来实现自动使用代理。
+		</div>
+		</div>
+		
 	  
 	  <div class="tab-pane fade" id="openvpn-route">
 		<p class="getconf-info">这里提供了除默认路由方式以外的openVPN配置文件。</p>
