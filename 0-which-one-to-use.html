@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="1" data-basepath="." data-revision="1431733773264">
+    <div class="book" data-level="1" data-basepath="." data-revision="1442662261994">
     
 
 <div class="book-summary">
@@ -222,7 +222,7 @@
                     
                         <h1 id="">选择适合自己的链接方式</h1>
 <h2 id="">服务器列表：</h2>
-<p>为了保证在较低成本情况下提供最优服务，服务器列表可能随时会更新，请注意经常前来查看。</p>
+<p>当前服务器各种线路基本可以兼顾，所以短期内应该不会更改了。</p>
 <table>
 <thead>
 <tr>
@@ -235,26 +235,21 @@
 <tr>
 <td>tokyo-jp.eduvpn.net</td>
 <td>日本 东京</td>
-<td>100Mbps对等。<strong>推荐通常情况下使用</strong></td>
-</tr>
-<tr>
-<td>fremont-us.eduvpn.net</td>
-<td>美国 费利蒙</td>
-<td>40Gbps In，125Mbps Out。<strong>推荐用于IPv6连接</strong></td>
+<td>100Mbps对等。<strong>推荐通常情况下使用，IPV6连接比lax-us稍慢</strong></td>
 </tr>
 <tr>
 <td>lax-us.eduvpn.net</td>
 <td>美国 洛杉矶</td>
-<td>100Mbps对等。<strong>电信，联通双直连</strong> 用于替代fremont-us.eduvpn.net </td>
+<td>100Mbps对等。<strong>推荐用于IPv6连接和电信用户使用，IPV6连接最优</strong></td>
 </tr>
 <tr>
-<td>hk.eduvpn.net</td>
-<td>香港</td>
-<td>限速8mbps，无IPV6，仅IPV4。 <strong>推荐延迟敏感场合，如游戏等</strong></td>
+<td>sg.eduvpn.net</td>
+<td>新加坡</td>
+<td>100Mbps对等。 <strong>电信走CN2，主要推荐电信用户使用</strong></td>
 </tr>
 </tbody>
 </table>
-<p>注：服务器相关监控，包括负载，带宽占用等，请查看：<a href="https://eduvpn.net/munin" target="_blank">munin</a></p>
+<p>注1：服务器相关监控，包括负载，带宽占用等，请查看：<a href="https://eduvpn.net/munin" target="_blank">munin</a></p>
 <h2 id="">当前提供的连接方式对比如下：</h2>
 <table>
 <thead>
@@ -277,14 +272,6 @@
 <td><strong>仅开放IPv6连接</strong>。</td>
 </tr>
 <tr>
-<td>shadowvpn</td>
-<td>全局路由</td>
-<td>默认国内路由穿透</td>
-<td>仅IPv6</td>
-<td>Linux，openwrt</td>
-<td><strong>推荐高端IPv4用户使用</strong>。</td>
-</tr>
-<tr>
 <td>shadowsocks</td>
 <td>socks5 / http代理</td>
 <td>默认国内路由穿透</td>
@@ -303,7 +290,7 @@
 </tbody>
 </table>
 <p>注1：PPTP，L2TP不安全，IPsec，IKEv2目前会被流量识别而导致服务器被阻断，不再提供。</p>
-<p>注2：shadowsocks / shadowvpn 默认没有开通，需要自行来邮件申请。我们也暂时不提供这两者运行在openwrt上的教程，请自行谷歌。</p>
+<p>注2：shadowsocks 默认没有开通，需要自行来邮件申请。我们也暂时不提供这两者运行在openwrt上的教程，请自行谷歌。</p>
 <p><strong>任何服务器速度/连接问题请邮件  eduvpn at gmail dot com</strong></p>
 
                     
